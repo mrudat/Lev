@@ -1734,6 +1734,10 @@ public class Ln {
     public static boolean contains(ArrayList<String> list, String s) {
 	return -1 != indexOfContains(list, s);
     }
+    
+    public static boolean containsIgnoreCase(ArrayList<String> list, String s) {
+        return -1 != indexOfContains(Ln.toUpper(new ArrayList<>(list)), s.toUpperCase());
+    }
 
     /**
      * True if list has a string equaling s, ignoring case.

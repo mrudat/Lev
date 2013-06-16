@@ -133,7 +133,7 @@ public abstract class LSaveFile {
 
     void readInSettings() {
 	File f = new File(location.getPath());
-	if (f.exists()) {
+	if (f.isFile()) {
 	    try {
 		BufferedReader input = new BufferedReader(new FileReader(f));
 		String version = input.readLine();  //title
